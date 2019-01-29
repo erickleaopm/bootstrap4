@@ -38,7 +38,7 @@
               <a class="nav-link" href="#conviertete-en-orador">Conviértete en orador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-platzi" href="#">Comprar tickets</a>
+              <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Comprar tickets</a>
             </li>
           </ul>
         </div>
@@ -70,8 +70,8 @@
                 Platzi Conf llega por primera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet.<br/>
                 Ven a conocer a miembros del Team Platzi, a otros estudiantes de Platzi y a los ordenadores de primer nivel que tenemos para ti. Te esperamos!
               </p>
-              <a href="#" class="btn btn-outline-light">Quiero ser orador</a>
-              <button type="button" class="btn btn-platzi">Comprar tickets</button>
+              <a href="#conviertete-en-orador" class="btn btn-outline-light">Quiero ser orador</a>
+              <button type="button" class="btn btn-platzi" data-toggle="modal" data-target="#modalCompra">Comprar tickets</button>
             </div>
           </div>
         </div>
@@ -230,6 +230,47 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="modalCompraTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCompraTitle">Comprar tickets</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="form-group col">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Username" required>
+                  <div class="invalid-feedback">
+                    Username incorrecto, ingrésalo nuevamente
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info" role="alert">
+              Recibirás un correo de confirmación si sales sorteado.
+            </div>
+            <div class="form-row">
+              <div class="form-group col text-right">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
+                <button id="btnSubmitModal" type="submit" class="btn btn-platzi">Comprar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Modal -->
   
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
