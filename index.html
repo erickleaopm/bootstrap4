@@ -38,7 +38,7 @@
               <a class="nav-link" href="#conviertete-en-orador">Conviértete en orador</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-platzi" href="#">Comprar tickets</a>
+              <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Comprar tickets</a>
             </li>
           </ul>
         </div>
@@ -236,17 +236,36 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalCompraTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <h5 class="modal-title" id="modalCompraTitle">Comprar tickets</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cancelar">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-platzi">Comprar</button>
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="form-group col">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Username" required>
+                  <div class="invalid-feedback">
+                    Username incorrecto, ingrésalo nuevamente
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="alert alert-info" role="alert">
+              Recibirás un correo de confirmación si sales sorteado.
+            </div>
+            <div class="form-row">
+              <div class="form-group col text-right">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</button>
+                <button id="btnSubmitModal" type="submit" class="btn btn-platzi">Comprar</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
