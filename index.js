@@ -15,4 +15,5 @@
       }, false);
     });
   }, false);
+  $('[data-toogle="tooltip"]').tooltip()
 })();
